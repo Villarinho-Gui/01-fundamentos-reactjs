@@ -6,4 +6,25 @@
   height: 18.3rem;
   border-radius: 8px;
 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.sidebar img{
+  height: 3.10rem;
+  padding: 2px;
+  border-radius: 8px;
+  border: 3px solid var(--green-500)
+}
+
+h2{
+  font-size: 1rem;
+}
+
+p{
+  font-size: 0.9rem;
+  color: var(--gray-400);
 }
