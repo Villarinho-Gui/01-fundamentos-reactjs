@@ -39,6 +39,8 @@
 }
 
 .profile span{
+  font-size: 0.875rem;
+  color: var(--gray-400);
   margin-bottom: 1rem;
   line-height: 1.6;
 }
@@ -63,4 +65,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
+
+  gap: 0.45rem;
+  transition: color 0.1s, background-color 0.1s;
+}
+
+.sidebar footer a:hover{
+  background-color: var(--green-500);
+  color: var(--white);
+  
 }
