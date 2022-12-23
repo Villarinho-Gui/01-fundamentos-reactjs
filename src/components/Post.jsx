@@ -19,10 +19,30 @@ export function Post(props) {
         <time title="23 de dezembro às 08:32h" dateTime="2022-12-23 08:32:30">
           Publicado há 1 hora
         </time>
-        <div className={styles.content}>
-          
-        </div>
       </header>
+      <div className={styles.content}>
+        <p>Fala galeraa 👋 </p>
+        <br />
+        <p>
+          Acabei de subir mais um projeto no meu portifa. É um projeto que fiz
+          no NLW Return, evento da Rocketseat. O nome do projeto é DoctorCare 🚀
+        </p>
+        <br />
+        <p className={styles.link}>👉 jane.design/doctorcare </p>
+        <br />
+        <p className={styles.hashtag}>#novoprojeto #nlw #rocketseat </p>
+      </div>
+      <footer>
+        <strong>Deixe seu feedback</strong>
+        <input
+          type="text"
+          maxLength={200}
+          placeholder="Escreva um comentário..."
+        />
+        <button type="submit" className={styles.publish}>
+          Publicar
+        </button>
+      </footer>
     </article>
   );
 }
