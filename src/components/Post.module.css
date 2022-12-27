@@ -1,6 +1,6 @@
 .post {
   width: 52rem;
-  height: 38.9rem;
+  height: 40rem;
   border-radius: 8px;
 
   background-color: var(--gray-800);
@@ -69,4 +69,45 @@
 
 .content a:hover {
   color: var(--green-300);
+}
+
+.commentForm {
+  width: 100%;
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--gray-600);
+}
+
+.commentForm > strong {
+  font-size: 0.875rem;
+  color: var(--gray-100);
+}
+
+.commentForm textarea {
+  width: 100%;
+  background: var(--gray-900);
+  border: 0;
+  resize: none; /*Não permite o usuário redimensionar o tamanho*/
+  height: 6rem;
+  padding: 1rem;
+  border-radius: 8px;
+
+  color: var(--gray-100);
+  line-height: 1.4;
+  margin-top: 1rem;
+}
+
+.commentForm button[type=submit]{
+  padding: 1rem 1.5rem; 
+  margin-top: 1.2rem;
+  border-radius: 8px;
+  border: 0;
+  background: var(--green-500);
+  color: var(--white);
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.commentForm button[type=submit]:hover{
+  background: var(--green-300);
 }

@@ -28,7 +28,9 @@ export function Post(props) {
           no NLW Return, evento da Rocketseat. O nome do projeto é DoctorCare 🚀
         </p>
         <br />
-        <p><a>👉 jane.design/doctorcare </a></p>
+        <p>
+          <a>👉 jane.design/doctorcare </a>
+        </p>
         <br />
         <p>
           <a href="#">#novoprojeto </a> <a href="#">#nlw </a>{" "}
@@ -36,15 +38,15 @@ export function Post(props) {
         </p>
       </div>
       <footer>
-        <strong>Deixe seu feedback</strong>
-        <input
-          type="text"
-          maxLength={200}
-          placeholder="Escreva um comentário..."
-        />
-        <button type="submit" className={styles.publish}>
-          Publicar
-        </button>
+        <form className={styles.commentForm}>
+          <strong>Deixe seu feedback</strong>
+          <textarea 
+            placeholder="deixe um comentário legal!"
+          />
+          <button type="submit" className={styles.publish}>
+            Comentar
+          </button>
+        </form>
       </footer>
     </article>
   );
