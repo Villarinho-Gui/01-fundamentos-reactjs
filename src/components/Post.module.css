@@ -7,28 +7,26 @@
   padding: 2.5rem;
 }
 
-.post + .post{
+.post + .post {
   margin-top: 2rem;
 }
 
-.post header{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+.post > header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-time{
-    font-size: 0.875rem;
-    font-weight: 100;
-    color: var(--gray-400);
+.post > header time {
+  font-size: 0.875rem;
+  font-weight: 100;
+  color: var(--gray-400);
 }
 
 .author {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-
-  width: 20rem;
+  gap: 1rem;
 }
 
 .avatar {
@@ -57,23 +55,18 @@ time{
   line-height: 1.6;
 }
 
-.content{
+.content {
   line-height: 1.6;
   color: var(--gray-300);
   margin-top: 1.5rem;
 }
 
-.content p{
-  margin-top: 1rem;
-}
-
-
-.content a{
+.content a {
   font-weight: bold;
   color: var(--green-500);
   text-decoration: none;
 }
 
-.content a:hover{
+.content a:hover {
   color: var(--green-300);
 }
