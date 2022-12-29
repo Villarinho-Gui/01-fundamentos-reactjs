@@ -1,4 +1,5 @@
 import styles from "./Post.module.css";
+import { Comments } from "./Comments";
 
 export function Post(props) {
   return (
@@ -47,6 +48,11 @@ export function Post(props) {
           </button>
         </footer>
       </form>
+      <div className={styles.commentList}>
+        <Comments />
+        <Comments />
+        <Comments />
+      </div>
     </article>
   );
 }
