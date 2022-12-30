@@ -14,7 +14,7 @@ export function Comments() {
           <header>
             <div className={styles.authorInfo}>
               <strong>
-                Guilherme Villarinho <span>(você)</span>
+                Guilherme Villarinhos <span>(você)</span>
               </strong>
               <time
                 title="28 de dezembro às 16:23h"
