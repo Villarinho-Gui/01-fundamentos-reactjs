@@ -1,20 +1,17 @@
 import styles from "./Comments.module.css";
 import { Trash, ThumbsUp } from "phosphor-react";
+import { Avatar } from "./Avatar";
 
 export function Comments() {
   return (
     <article className={styles.comments}>
-      <img
-        className={styles.avatar}
-        src="https://github.com/Villarinho-Gui.png"
-        alt="Foto de perfil"
-      />
+      <Avatar src="https://github.com/Villarinho-Gui.png" />
       <div className={styles.commentContainer}>
         <div className={styles.comment}>
           <header>
             <div className={styles.authorInfo}>
               <strong>
-                Guilherme Villarinhos <span>(você)</span>
+                Guilherme Villarinho <span>(você)</span>
               </strong>
               <time
                 title="28 de dezembro às 16:23h"
