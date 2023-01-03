@@ -1,8 +1,13 @@
 import styles from "./Comments.module.css";
 import { Trash, ThumbsUp } from "phosphor-react";
 import { Avatar } from "./Avatar";
+import { useEffect, useState } from "react";
 
 export function Comments() {
+  const [like, setLike] = useState(0);
+
+  useEffect (()=>{console.table("Chamou")},[like]);
+
   return (
     <article className={styles.comments}>
       <Avatar hasBorder={false} src="https://github.com/Villarinho-Gui.png" />
@@ -27,9 +32,9 @@ export function Comments() {
           <p>Muito bom Devon, parabéns!!</p>
         </div>
         <footer>
-          <button>
+          <button onClick={()=> setLike(like+1)}>
             <ThumbsUp size={20} weight="light" />
-            Aplaudir <span>23</span>
+            Aplaudir <span>{like}</span>
           </button>
         </footer>
       </div>
