@@ -11,7 +11,7 @@ export function Sidebar() {
           src="https://images.pexels.com/photos/574071/pexels-photo-574071.jpeg?auto=compress&cs=tinysrgb&w=500&h=750&dpr=1"
         />
         <div className={styles.profile}>
-        <Avatar hasBorder={true} src="https://github.com/Villarinho-Gui.png"/>
+        <Avatar src="https://github.com/Villarinho-Gui.png"/>
 
           <strong>Guilherme Villarinho</strong>
           <span>Web Developer</span>

@@ -1,9 +1,7 @@
 import React from "react";
-import styles from "./Avatar.module.css"
+import styles from "./Avatar.module.css";
 
-export function Avatar({ hasBorder = true, src}) {
-const hasBorder = props.hasBorder !== false
-
+export function Avatar({hasBorder = true, src}) {
   return (
     <img
       className={hasBorder ? styles.avatarWithBorder : styles.avatar}
@@ -12,4 +10,3 @@ const hasBorder = props.hasBorder !== false
     />
   );
 }
-

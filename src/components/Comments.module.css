@@ -25,6 +25,7 @@
 }
 
 .comment header {
+  align-items: flex-star t;
   display: flex;
   justify-content: space-between;
 }
