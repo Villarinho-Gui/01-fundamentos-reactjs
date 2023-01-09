@@ -44,6 +44,8 @@ export function Post({ author, publishedAt, content }) {
     setComments(commentsWithoutDeletedOne);
   }
 
+  const TextAreaEmpty = newCommentText.length === 0;
+
   return (
     <article className={styles.post}>
       <header>
@@ -79,9 +81,10 @@ export function Post({ author, publishedAt, content }) {
           placeholder="Deixe um comentário legal!"
           value={newCommentText}
           onChange={handleNewCommentChange}
+          required
         />
         <footer>
-          <button type="submit" className={styles.publish}>
+          <button type="submit" className={styles.publish} disabled={TextAreaEmpty}>
             Publicar
           </button>
         </footer>
@@ -89,11 +92,13 @@ export function Post({ author, publishedAt, content }) {
 
       <div className={styles.commentList}>
         {comments.map((comments) => {
-          return <Comments 
-            key={comments} 
-            content={comments} 
-            onDeleteComment={deleteComment}
-          />;
+          return (
+            <Comments
+              key={comments}
+              content={comments}
+              onDeleteComment={deleteComment}
+            />
+          );
         })}
       </div>
     </article>

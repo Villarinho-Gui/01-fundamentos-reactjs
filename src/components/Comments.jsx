@@ -6,12 +6,14 @@ import { useEffect, useState } from "react";
 export function Comments({ content, onDeleteComment }) {
   const [like, setLike] = useState(0);
 
-  useEffect(() => {
-    console.table("Chamou");
-  }, [like]);
+  function handleDeleteComment() {
+    onDeleteComment(content);
+  }
 
-  function handleDeleteComment(){
-    onDeleteComment(content)
+  function handleAddLike() {
+    setLike((state) => {
+      return + 1;
+    });
   }
 
   return (
@@ -38,7 +40,7 @@ export function Comments({ content, onDeleteComment }) {
           <p>{content}</p>
         </div>
         <footer>
-          <button onClick={() => setLike(like + 1)}>
+          <button onClick={handleAddLike}>
             <ThumbsUp size={20} weight="light" />
             Aplaudir <span>{like}</span>
           </button>
