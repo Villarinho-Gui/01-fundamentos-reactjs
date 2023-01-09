@@ -3,10 +3,16 @@ import { Trash, ThumbsUp } from "phosphor-react";
 import { Avatar } from "./Avatar";
 import { useEffect, useState } from "react";
 
-export function Comments() {
+export function Comments({ content, onDeleteComment }) {
   const [like, setLike] = useState(0);
 
-  useEffect (()=>{console.table("Chamou")},[like]);
+  useEffect(() => {
+    console.table("Chamou");
+  }, [like]);
+
+  function handleDeleteComment(){
+    onDeleteComment(content)
+  }
 
   return (
     <article className={styles.comments}>
@@ -25,14 +31,14 @@ export function Comments() {
                 Cerca de 2h atrás
               </time>
             </div>
-            <button tittle="Deletar comentário">
+            <button onClick={handleDeleteComment} tittle="Deletar comentário">
               <Trash size={25} weight="light" />
             </button>
           </header>
-          <p>Muito bom Devon, parabéns!!</p>
+          <p>{content}</p>
         </div>
         <footer>
-          <button onClick={()=> setLike(like+1)}>
+          <button onClick={() => setLike(like + 1)}>
             <ThumbsUp size={20} weight="light" />
             Aplaudir <span>{like}</span>
           </button>
